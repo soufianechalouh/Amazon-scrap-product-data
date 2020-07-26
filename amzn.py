@@ -28,6 +28,7 @@ def get_assins(file_name):
             else:
                 url = row[0]
                 data = scrape("{}".format(url))
+                print("{},{}\n".format(url, str(data['seller']).replace("Brand: ", "")))
                 outfile.write("{},{}\n".format(url, str(data['seller']).replace("Brand: ", "")))
 
                 line_count += 1
