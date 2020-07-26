@@ -7,6 +7,8 @@ import amzn
 UPLOAD_FOLDER = './tmp/uploads'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+__location__ = os.path.realpath(
+   os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 @app.route('/')
 def hello_world():
